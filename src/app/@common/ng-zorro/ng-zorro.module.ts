@@ -13,6 +13,7 @@ import {
   NzSkeletonModule,
   NzPaginationModule,
   NzEmptyModule,
+  NzBackTopModule,
 
   NzSiderComponent,
   NzHeaderComponent,
@@ -25,6 +26,8 @@ import {
   NzSkeletonComponent,
   NzPaginationComponent,
   NzEmptyComponent,
+  NzListItemMetaComponent,
+  NzBackTopComponent,
 
   NzMenuDirective,
   NzMenuItemDirective,
@@ -48,7 +51,8 @@ import {
     NzListModule,
     NzSkeletonModule,
     NzPaginationModule,
-    NzEmptyModule
+    NzEmptyModule,
+    NzBackTopModule
   ],
   exports: [
     NzLayoutComponent,
@@ -62,6 +66,8 @@ import {
     NzSkeletonComponent,
     NzPaginationComponent,
     NzEmptyComponent,
+    NzListItemMetaComponent,
+    NzBackTopComponent,
 
     NzMenuDirective,
     NzMenuItemDirective,

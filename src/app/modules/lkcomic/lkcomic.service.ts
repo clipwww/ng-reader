@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
 import { ResultListGenericVM } from '../../@common/view-models/result.vm';
-import { LKComicItem } from '../../@common/view-models/lkcomic.vm';
+import { LKComicItem, LKComicImageResultVM } from '../../@common/view-models/lkcomic.vm';
 
 
 @Injectable({
@@ -27,9 +27,6 @@ export class LkcomicService {
   }
 
   getImages(id: string) {
-    return this.http.get<ResultListGenericVM<{id: string; src: string}>>(`${this.baseURL}/api/lk/details/${id}`)
-    .pipe(
-      map(ret => ret.success ? ret.items : [])
-    );
+    return this.http.get<LKComicImageResultVM>(`${this.baseURL}/api/lk/details/${id}`);
   }
 }

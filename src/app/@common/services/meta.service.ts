@@ -6,7 +6,8 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class MetaService {
+  pageSubTitle = '';
 
-  constructor(private activatedRoute: ActivatedRoute) { }
+  constructor() { }
 
 }

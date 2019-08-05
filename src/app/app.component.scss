@@ -1,13 +1,20 @@
+@import "src/assets/scss/mixin";
+
 nz-header {
-  // position: fixed;
-  // top: 0;
-  // left: 0;
-  // width: 100%;
-  // height: 64px;
-  // z-index: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 64px;
   padding: 0 15px;
+  margin-left: 200px;
   background-color: #fff;
   box-shadow: 0 1px 3px rgba(0,0,0, .3);
+  z-index: 1;
+
+  @include respond-to(sm) {
+    margin-left: 0;
+  }
 
   h1 {
     margin: 0;
@@ -16,6 +23,12 @@ nz-header {
 }
 
 nz-sider {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+
   .logo {
     display: flex;
     align-items: center;
@@ -30,8 +43,18 @@ nz-sider {
   display: flex;
   flex-flow: column;
   min-height: 100vh;
+  margin-left: 200px;
+  padding-top: 64px;
+
+  @include respond-to(sm) {
+    margin-left: 0;
+  }
 }
 
 .ant-layout-content {
   padding: 15px;
+}
+
+nz-footer {
+  padding: 10px 15px;
 }
